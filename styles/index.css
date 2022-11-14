@@ -9,6 +9,88 @@ body {
     background-attachment: fixed;
 }
 
+#moon{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: fixed;
+    left: 5%;
+    top:50vh;
+    background-image: url("/images/moon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: moon-move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+   
+}
+
+#satellite{
+    z-index: -1;
+    position: fixed;
+    background-image: url("/images/satellite.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    animation-name: satellite-move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes satellite-move {
+    0%{
+        left: 5%;
+        top: 90vh;
+    }
+    25%{
+        transform: rotate(-90deg);
+        left: 80%;
+        top: 75vh;
+    }
+    50%{
+        transform: rotate(-180deg);
+        left: 60%;
+        top: 5vh;
+    }
+    75%{
+        transform: rotate(-270deg);
+        left: 20%;
+        top:20vh;
+    }
+    100%{
+        left: 5%;
+        top: 90vh;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes moon-move{
+    0%{
+        left: 5%;
+        top:50vh;
+    }
+    25%{
+        left: 60%;
+        top:15vh;
+    }
+    50%{
+        left: 80%;
+        bottom: 80vh;
+    }
+    75%{
+        left:40%;
+        top: 90vh;
+    }
+    100%{
+        left: 5%;
+        top:50vh;
+    }
+
+}
 #cover-section {
     height: 100vh;
     display: flex;
