@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gajraj+One&family=Press+Start+2P&display=swap');
+
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(29, 29, 29);
+}
+
+#cover{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#name{
+    display: flex;
+    position: relative;
+    top: 37%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-size: 120px;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Press Start 2P', cursive; */
+    color: white;
+}
+
+#fname{
+    line-height: 1em;
+}
+
+#lname{
+    margin-top: 2px;
+    line-height: 1em;
+}
+
+.name-letter{
+    transition: 0.3s all linear;
+}
+.name-letter:hover{
+    color: rgb(125, 125, 235);
+    font-family: 'Press Start 2P', cursive;
+}
+
+#circle{
+    background-color: rgb(252, 252, 58);
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    right: calc(0% - 0.8em);
+    top: calc(0% - 0.8em);
+    font-size: 2em;
+    font-family: 'Gajraj One', cursive;
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#circle:hover{
+    width: calc(100% + 0.8em);
+    height: calc(100% + 0.8em);
+    border-radius: 0%;
+}
+
+#main-nav{
+    display: none;
+}
+
+#nav-text{
+    color: rgb(78, 78, 78);
+}
+
+#circle:hover > #nav-text{
+    display: none;
+}
+
+#circle:hover > #main-nav{
+    display: block;
+}
