@@ -1,85 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Gajraj+One&family=Press+Start+2P&display=swap');
 
-body{
-    overflow: hidden;
+body {
     margin: 0;
     padding: 0;
-    background-color: rgb(29, 29, 29);
+    overflow-x: hidden;
 }
 
-#cover{
+#cover-page {
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    background-color: rgb(29, 29, 29);
+    color: rgb(255, 241, 50);
+    animation: cover-jump 4s ease-in-out infinite 3s;
+}
+
+.section-full-cover{
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
     height: 100vh;
 }
+#main-page {
+    background-color: rgb(29, 28, 34);
+    color: rgb(255, 255, 255);
+}
 
-#name{
-    display: flex;
-    position: relative;
-    top: 37%;
-    width: fit-content;
-    display: flex;
+#name {
+    position: absolute;
+    top: 30vh;
+    width: 100%;
     flex-direction: column;
-    font-size: 120px;
+    font-size: 8em;
     font-family: 'Anton', sans-serif;
-    /* font-family: 'Press Start 2P', cursive; */
-    color: white;
 }
 
-#fname{
-    line-height: 1em;
-}
-
-#lname{
+.cover-name-text{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 2px;
     line-height: 1em;
 }
 
-.name-letter{
+
+
+ .name-letter{
     transition: 0.3s all linear;
 }
-.name-letter:hover{
-    color: rgb(125, 125, 235);
+
+.name-letter:nth-child(1){
+    font-family: 'Press Start 2P', cursive;
+}
+.name-letter:nth-child(3){
+    font-family: 'Press Start 2P', cursive;
+}
+.name-letter:nth-child(5){
     font-family: 'Press Start 2P', cursive;
 }
 
-#circle{
-    background-color: rgb(252, 252, 58);
-    position: absolute;
-    width: 5em;
-    height: 5em;
+
+.name-letter:hover{
+    color: rgb(125, 125, 235);
+}
+
+#reveal-btn{
+    position: relative;
+    top: 85%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    width: 100%;
     box-sizing: border-box;
-    right: calc(0% - 0.8em);
-    top: calc(0% - 0.8em);
     font-size: 2em;
-    font-family: 'Gajraj One', cursive;
-    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: blueviolet;
+    border-radius: 50%;
 }
 
-#circle:hover{
-    width: calc(100% + 0.8em);
-    height: calc(100% + 0.8em);
-    border-radius: 0%;
+#main-box{
+    width: em;
+    height: 7em;
+    border-radius: 50%;
 }
 
-#main-nav{
-    display: none;
+@media(max-width:550px) {
+    #name {
+        font-size: 5em;
+        top: 40vh
+    }
 }
 
-#nav-text{
-    color: rgb(78, 78, 78);
+@keyframes cover-go-up{
+    0%{
+        height: 100vh;
+    }
+    100%{
+        height: 0vh;
+    }
 }
 
-#circle:hover > #nav-text{
-    display: none;
-}
-
-#circle:hover > #main-nav{
-    display: block;
+@keyframes cover-jump{
+    0%{
+        height: 100vh;
+    }
+    15%{
+        height: 90vh;
+    }
+    25%{
+        height: 100vh;
+    }
+    100%{
+        height: 100vh;
+    }
 }
