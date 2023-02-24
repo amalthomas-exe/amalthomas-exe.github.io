@@ -25,5 +25,25 @@ document.getElementById("reveal-btn").onclick = ()=>{
     document.getElementById("cover-page").style.animation = "cover-go-up 1s ease-in-out";
     setTimeout(()=>{
         document.getElementById("cover-page").style.display = "none";
+        document.getElementById("about").style.display = "block";
     },1000)
 }
+
+var coverPage = document.getElementById("cover-page");
+var swipeManager = new Hammer.Manager(coverPage);
+var Swipe = new Hammer.Swipe();
+
+swipeManager.add(Swipe);
+
+var deltaY = 0;
+swipeManager.on('swipe',(e)=>{
+  var direction = e.offsetDirection;
+  console.log(direction);
+  if (direction === 8 || direction === 16){
+    document.getElementById("cover-page").style.animation = "cover-go-up 1s ease-in-out";
+    setTimeout(()=>{
+        document.getElementById("cover-page").style.display = "none";
+        document.getElementById("about").style.display = "block";
+    },1000)
+  }
+})
