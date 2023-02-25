@@ -1,64 +1,73 @@
-const fname = document.getElementById("fname-main")
-const lname = document.getElementById("lname-main")
+let redBall = document.getElementById("circle-red");
+let greenBall= document.getElementById("circle-green");
+let pinkBall = document.getElementById("circle-pink");
+let FPS = 60;
 
-const fnameLetters = fname.innerHTML.split("");
-const lnameLetters = lname.innerHTML.split("");
+let xRedPosition = 10;
+let yRedPosition = 50;
+let xRedSpeed = 2;
+let yRedSpeed = 3;
 
-fname.innerText = "";
-lname.innerText = "";
+let xGreenPosition = 20;
+let yGreenPosition = 300;
+let xGreenSpeed = 2;
+let yGreenSpeed = 5;
 
-fnameLetters.forEach((letter)=>{
-    const fnameSpan = document.createElement("span");
-    fnameSpan.className = "name-letter";
-    fnameSpan.innerText = letter;
-    fname.appendChild(fnameSpan)
-})
+let xPinkPosition = 160;
+let yPinkPosition = 230;
+let yPinkSpeed = 2;
+let xPinkSpeed = 1;
 
-lnameLetters.forEach((letter)=>{
-    const lnameSpan = document.createElement("span");
-    lnameSpan.className = "name-letter";
-    lnameSpan.innerText = letter;
-    lname.appendChild(lnameSpan)
-})
-
-document.getElementById("reveal-btn").onclick = ()=>{
-    document.getElementById("cover-page").style.animation = "cover-go-up 1s ease-in-out";
-    setTimeout(()=>{
-        document.getElementById("cover-page").style.display = "none";
-        document.getElementById("about").style.display = "block";
-    },1000)
+let updateRed =()=>{
+    redBall.style.left = xRedPosition+"px";
+    redBall.style.top = yRedPosition+"px";
 }
 
-var coverPage = document.getElementById("cover-page");
-var swipeManager = new Hammer.Manager(coverPage);
-var Swipe = new Hammer.Swipe();
-
-swipeManager.add(Swipe);
-
-var deltaY = 0;
-swipeManager.on('swipe',(e)=>{
-  var direction = e.offsetDirection;
-  console.log(direction);
-  if (direction === 8 || direction === 16){
-    document.getElementById("cover-page").style.animation = "cover-go-up 1s ease-in-out";
-    setTimeout(()=>{
-        document.getElementById("cover-page").style.display = "none";
-        document.getElementById("about").style.display = "block";
-    },1000)
-  }
-})
-
-coverPage.onmousemove = (e)=>{
-    let x = e.clientX;
-    let y = e.clientY;
-
-    let anchor = document.getElementById("reveal-btn");
-    let rekt = anchor.getBoundingClientRect();
-    let anchorX = rekt.left + rekt.width / 2;
-    let anchorY = rekt.top + rekt.height /2 ;
-    let dy = anchorY  - y;
-    let dx = anchorX - x;
-    let angle = Math.atan2(dy,dx)*180 / Math.PI;
-    document.getElementById("arrow").style.rotate = angle-90+"deg";
-
+let updateGreen =()=>{
+    greenBall.style.left = xGreenPosition+"px";
+    greenBall.style.top = yGreenPosition+"px";
 }
+
+let updatePink = ()=>{
+    pinkBall.style.left = xPinkPosition+"px";
+    pinkBall.style.top = yPinkPosition+"px";
+}
+
+setInterval(()=>{
+    if(xRedPosition + redBall.clientWidth >= window.innerWidth || xRedPosition<=0){
+        xRedSpeed=-xRedSpeed;
+    }
+
+    if(yRedPosition + redBall.clientHeight >= innerHeight || yRedPosition <= 0){
+        yRedSpeed= -yRedSpeed;
+    }
+    xRedPosition+=xRedSpeed;
+    yRedPosition+=yRedSpeed;
+    updateRed();
+},1000/FPS)
+
+setInterval(()=>{
+    if(xGreenPosition + greenBall.clientWidth >= window.innerWidth || xGreenPosition<=0){
+        xGreenSpeed=-xGreenSpeed;
+    }
+
+    if(yGreenPosition + greenBall.clientHeight >= innerHeight || yGreenPosition <= 0){
+        yGreenSpeed= -yGreenSpeed;
+    }
+    xGreenPosition+=xGreenSpeed;
+    yGreenPosition+=yGreenSpeed;
+    updateGreen();
+},1000/FPS)
+
+setInterval(()=>{
+    if(xPinkPosition + pinkBall.clientWidth >= window.innerWidth || xPinkPosition<=0){
+        xPinkSpeed=-xPinkSpeed;
+    }
+
+    if(yPinkPosition + pinkBall.clientHeight >= innerHeight || yPinkPosition <= 0){
+        yPinkSpeed= -yPinkSpeed;
+    }
+    xPinkPosition+=xPinkSpeed;
+    yPinkPosition+=yPinkSpeed;
+    updatePink();
+},1000/FPS)
