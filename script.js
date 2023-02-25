@@ -47,3 +47,18 @@ swipeManager.on('swipe',(e)=>{
     },1000)
   }
 })
+
+coverPage.onmousemove = (e)=>{
+    let x = e.clientX;
+    let y = e.clientY;
+
+    let anchor = document.getElementById("reveal-btn");
+    let rekt = anchor.getBoundingClientRect();
+    let anchorX = rekt.left + rekt.width / 2;
+    let anchorY = rekt.top + rekt.height /2 ;
+    let dy = anchorY  - y;
+    let dx = anchorX - x;
+    let angle = Math.atan2(dy,dx)*180 / Math.PI;
+    document.getElementById("arrow").style.rotate = angle-90+"deg";
+
+}
