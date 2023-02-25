@@ -146,8 +146,15 @@ body {
     transition: 0.3s all linear;
 }
 
-.name-letter:hover{
+#fname-main > .name-letter:nth-child(1){
     color: rgb(125, 125, 235);
+    transform: translateY(-10px);
+    rotate: -10deg;
+    font-size: 110%;
+}
+
+.name-letter:hover{
+    color: rgb(165, 235, 125);
     transform: translateY(-10px);
     font-size: 110%;
 }
