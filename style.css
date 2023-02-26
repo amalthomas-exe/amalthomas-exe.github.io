@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Shadows+Into+Light&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Josefin+Sans&family=Shadows+Into+Light&family=Source+Code+Pro&display=swap');
 
 body {
     margin: 0;
@@ -6,6 +6,7 @@ body {
 }
 
 .full-page {
+    z-index: 2;
     background-color: #161616;
     width: 100%;
     height: 100vh;
@@ -21,7 +22,8 @@ body {
 }
 
 .content-box {
-    z-index: 2;
+    position: relative;
+    z-index: 3;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -53,62 +55,193 @@ body {
     font-size: 6em;
 }
 
-#filter-layer{
-    z-index: 1;
-    position: fixed;
+#filter-layer {
     left: 0;
-    backdrop-filter: blur(79px);
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: blur(80px);
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
 }
+
 .circles {
-    position: fixed;
     z-index: 0;
+    position: fixed;
     border-radius: 50%;
     width: 10em;
     height: 10em;
 }
 
-#circle-red{
-    background: rgb(211,10,10);
-    position: fixed;
+#circle-red {
+    background: rgb(211, 10, 10);
     top: 0px;
     left: 0px;
 }
 
-#circle-green{
+#circle-green {
     background-color: rgb(17, 238, 17);
     bottom: 2em;
     left: 5em;
 }
 
-#circle-pink{
+#circle-pink {
     background-color: rgb(238, 17, 238);
     top: 40vh;
     left: 40%;
 }
 
-#circle-blue{
+#circle-blue {
     background-color: rgb(17, 138, 238);
     top: 80vh;
     left: 60%;
 }
 
-#circle-purple{
+#circle-purple {
     background-color: rgb(99, 16, 194);
     top: 20vh;
     right: -2%;
 }
 
-@media(max-width:950px){
-    .content-box{
+
+
+#section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pre-about {
+    font-size: 3em;
+    margin-left: 1.5em;
+    font-family: 'Shadows Into Light', cursive;
+    color: white;
+}
+
+#about-text {
+    margin-top: 1.5em;
+    margin-left: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4em;
+    width: 60%;
+    color: whitesmoke;
+}
+
+#skills-box {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    border-radius: 25px;
+    padding: 2em;
+    border: 1px solid whitesmoke;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(100px);
+}
+
+#skills-title {
+    margin-top: 0.5em;
+    font-size: 2.2em;
+    color: white;
+    margin-bottom: 0.4em;
+}
+
+#skills-view {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name-and-bar {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+    color: white;
+    margin-bottom: 1.2em;
+}
+
+.skill-bar {
+    width: 90%;
+    height: 0.7em;
+    margin-top: 0.2em;
+    border-radius: 25px;
+    background-color: rgb(243, 240, 234);
+}
+
+#skill-python-bar {
+    width: 98%;
+    height: inherit;
+    border-radius: 25px;
+    background-color: rgb(70, 238, 64);
+}
+
+
+#skill-frontend-bar {
+    width: 95%;
+    height: inherit;
+    border-radius: 25px;
+    background-color: #F419DE;
+}
+
+#skill-react-bar {
+    width: 94%;
+    height: inherit;
+    border-radius: 25px;
+    background-color: #EF892A;
+}
+
+#skill-c-java-bar {
+    width: 90%;
+    height: inherit;
+    border-radius: 25px;
+    background-color: #f03838;
+}
+
+#skill-node-bar {
+    width: 89%;
+    height: inherit;
+    border-radius: 25px;
+    background-color: #4F33FD;
+}
+
+#skill-flutter-bar {
+    width: 80%;
+    height: inherit;
+    border-radius: 25px;
+    background-color: #BCFD33;
+}
+
+@media(max-width:950px) {
+    .content-box {
         flex-direction: column;
         align-items: center;
     }
 
-    #fname,#lname{
+    #fname,
+    #lname {
         font-size: 4em;
-    } 
+    }
 
+    #about-text {
+        text-align: center;
+        margin-left: 0;
+        width: 90%;
+        font-size: 1em
+    }
+    #pre-about{
+        margin-left: 0px;
+        text-align: center;
+    }
+    #skills-box{
+        margin-top: 2em;
+    }
+
+}
+
+@media(max-width: 500px){
+    #skills-box{
+        width: 70%;
+    }
 }
