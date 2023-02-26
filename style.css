@@ -57,11 +57,12 @@ body {
 
 #filter-layer {
     left: 0;
+    top: 0;
     position: fixed;
     z-index: 1;
-    backdrop-filter: blur(80px);
-    width: 100%;
-    height: 100vh;
+    backdrop-filter: blur(200px);
+    width: 100000px;
+    min-height: 100000px;
     box-sizing: border-box;
 }
 
@@ -69,8 +70,8 @@ body {
     z-index: 0;
     position: fixed;
     border-radius: 50%;
-    width: 10em;
-    height: 10em;
+    width: 15em;
+    height: 15em;
 }
 
 #circle-red {
@@ -138,6 +139,7 @@ body {
     border: 1px solid whitesmoke;
     background-color: rgba(255, 255, 255, 0.116);
     backdrop-filter: blur(100px);
+    transition: all 1s ease-in-out;
 }
 
 #skills-title {
@@ -169,15 +171,31 @@ body {
     border-radius: 25px;
     background-color: rgb(243, 240, 234);
 }
+.bar-hidden{
+    opacity: 0;
+}
 
 #skill-python-bar {
     width: 98%;
     height: inherit;
     border-radius: 25px;
-    background-color: rgb(70, 238, 64);
+    background-color: rgb(90, 189, 87);
 }
 
+.python-bar-visible{
+    opacity: 1;
+    width: 98%;
+    animation: python-bar-animate 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
+@keyframes python-bar-animate{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 98%;
+    }
+}
 #skill-frontend-bar {
     width: 95%;
     height: inherit;
@@ -185,33 +203,115 @@ body {
     background-color: #F419DE;
 }
 
+.frontend-bar-visible{
+    opacity: 1;
+    width: 95%;
+    animation: frontend-bar-animate 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes frontend-bar-animate{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+
 #skill-react-bar {
     width: 94%;
     height: inherit;
     border-radius: 25px;
-    background-color: #EF892A;
+    background-color: #b16116;
+}
+
+.react-bar-visible{
+    opacity: 1;
+    width: 94%;
+    animation: react-bar-animate 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes react-bar-animate{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 94%;
+    }
 }
 
 #skill-c-java-bar {
     width: 90%;
     height: inherit;
     border-radius: 25px;
-    background-color: #f03838;
+    background-color: #9e3030;
 }
 
+.c-java-bar-visible{
+    opacity: 1;
+    width: 90%;
+    animation: c-java-bar-animate 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes c-java-bar-animate{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
 #skill-node-bar {
     width: 89%;
     height: inherit;
     border-radius: 25px;
-    background-color: #4F33FD;
+    background-color: #372a88;
 }
 
+.node-bar-visible{
+    opacity: 1;
+    width: 89%;
+    animation: node-bar-animate 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes node-bar-animate{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 89%;
+    }
+}
 #skill-flutter-bar {
     width: 80%;
     height: inherit;
     border-radius: 25px;
-    background-color: #BCFD33;
+    background-color: #779733;
 }
+
+.flutter-bar-visible{
+    opacity: 1;
+    width: 80%;
+    animation: flutter-bar-animate 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes flutter-bar-animate{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.skill-box-hidden{
+    opacity: 0;
+}
+
+.skill-box-visible{
+    opacity: 1;
+}
+
 
 @media(max-width:950px) {
     .content-box {
@@ -236,6 +336,7 @@ body {
     }
     #skills-box{
         margin-top: 2em;
+        margin-right: 0;
     }
 
 }

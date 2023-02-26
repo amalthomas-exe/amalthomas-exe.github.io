@@ -8,28 +8,28 @@ let FPS = 60;
 
 let xRedPosition = 10;
 let yRedPosition = 50;
-let xRedSpeed = 3;
-let yRedSpeed = 5;
+let xRedSpeed = 1.5;
+let yRedSpeed = 2.5;
 
 let xGreenPosition = 20;
 let yGreenPosition = 300;
-let xGreenSpeed = 2;
-let yGreenSpeed = 5;
+let xGreenSpeed = 1;
+let yGreenSpeed = 2.5;
 
 let xPinkPosition = 160;
 let yPinkPosition = 230;
-let yPinkSpeed = 2;
-let xPinkSpeed = 6;
+let yPinkSpeed = 1;
+let xPinkSpeed = 3;
 
 let xBlueposition = 30;
 let yBlueposition = 350;
-let yBlueSpeed = 2;
-let xBlueSpeed = 5;
+let yBlueSpeed = 1;
+let xBlueSpeed = 2.5;
 
 let xPurpleposition = 250;
 let yPurpleposition = 230;
-let yPurpleSpeed = 2;
-let xPurpleSpeed = 3;
+let yPurpleSpeed = 1;
+let xPurpleSpeed = 1.5;
 
 let updateRed =()=>{
     redBall.style.left = xRedPosition+"px";
