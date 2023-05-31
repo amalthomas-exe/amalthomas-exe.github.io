@@ -5,45 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
     <title>Amal Thomas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="moon"></div>
-    <div id="satellite"></div>
-    <section id="cover-section">
-        <div title="intro">
-            <div id="pre-name" class="text-mid">Hey 👋, I'm</div>
-            <div id="name" class="text-large">Amal Thomas</div>
-            <div id="post-name" class="text-small">Broke dude</div>
+    <div id="filter-layer"></div>
+    <div id="circle-red" class="circles"></div>
+    <div id="circle-blue" class="circles"></div>
+    <div id="circle-green" class="circles"></div>
+    <div id="circle-pink" class="circles"></div>
+    <div id="circle-purple" class="circles"></div>
+    <section id="section-home" class="full-page">
+        <div class="content-box">
+            <div id="name-box">
+                <div id="salutation">Hi, I'm</div>
+                <div id="name">
+                    <div id="fname">Amal</div>
+                    <div id="lname">Thomas</div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="main-section" >
-        <div id="main-about">
-            <div id="main-about-title" class="text-mid">Who am I ?</div>
-            <div id="main-about-desc" class="text-small">Unofficialy, I consider myself to be a person who smashes keyboards day in and out for a living.</div>
-            <div id="main-about-desc" class="text-small">Officially 👇</div>
-        </div>
-        <div id="id-container">
-            <div id="id-box">
-                <div id="id-header" class="text-small">
-                    <div id="id-header-hole"></div>
-                    <div id="id-header-text">ID</div>
+    <section id="section-about" class="full-page">
+        <div class="content-box">
+            <div id="about-text-box">
+                <div id="pre-about">
+                    About me
                 </div>
-                <div id="id-body">
-                    <div id="id-photo-container"><div id="id-photo"></div></div>
-                    <div id="id-details">
-                        <div class="text-small" id="id-details-text"><b>Name:</b> Amal Thomas</div>
-                        <div class="text-small" id="id-details-text"><b>Age:</b> 19</div>
-                        <div class="text-small" id="id-details-text"><b>Residence:</b> Kottayam, Kerala</div>
-                        <div class="text-small" id="id-details-text"><b>Current Status:</b> B.Tech in CSE</div>
-                        <div class="text-small" id="id-details-text"><b>Years of development experience:</b> 2</div>
+                <div id="about-text">
+                    <p>
+                        A Computer Science student from India with expertise in Full-Stack Web and Mobile Development.
+                    </p>
+                    <p>
+                        Creator of DWL and FlashMorse
+                    </p>
+                </div>
+            </div>
+            <div id="skills-box" class="skill-box-hidden">
+                <div id="skills-title">Skills</div>
+                <div id="skills-view">
+                    <div class="skill-name-and-bar">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div id="skill-python-bar" class="bar-hidden"></div>
+                        </div>
+                    </div>
+                    <div class="skill-name-and-bar">
+                        <div class="skill-name">Frontent Web Development</div>
+                        <div class="skill-bar">
+                            <div id="skill-frontend-bar" class="bar-hidden"></div>
+                        </div>
+                    </div>
+                    <div class="skill-name-and-bar">
+                        <div class="skill-name">React.js</div>
+                        <div class="skill-bar">
+                            <div id="skill-react-bar" class="bar-hidden"></div>
+                        </div>
+                    </div>
+                    <div class="skill-name-and-bar">
+                        <div class="skill-name">C / Java</div>
+                        <div class="skill-bar">
+                            <div id="skill-c-java-bar" class="bar-hidden"></div>
+                        </div>
+                    </div>
+                    <div class="skill-name-and-bar">
+                        <div class="skill-name">Node.js</div>
+                        <div class="skill-bar">
+                            <div id="skill-node-bar" class="bar-hidden"></div>
+                        </div>
+                    </div>
+                    <div class="skill-name-and-bar">
+                        <div class="skill-name">Flutter</div>
+                        <div class="skill-bar">
+                            <div id="skill-flutter-bar" class="bar-hidden"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </body>
-
+<script src="scripts/backgroundCircleMove.js"></script>
+<script src="scripts/visibleOnScroll.js" defer></script>
 </html>
