@@ -1,0 +1,102 @@
+#home{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#home-grid-top-left{
+    background-color: #EB4511;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-grid-top-right{
+    background-color: #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+#home-grid-bottom-left{
+    background-color: #F3E13B;
+    position: relative;
+}
+
+#home-grid-bottom-right{
+    background-color: #F7CCE8;
+    position: relative;
+}
+
+#outer-oval{
+    width: 60%;
+    height: 65%;
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inner-circle{
+    aspect-ratio: 1/1;
+    height: 100%;
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inner-ball{
+    aspect-ratio: 1/1;
+    height: 30%;
+    background-color: black;
+    border-radius: 50%;
+}
+#astro-img-div{
+    position: absolute;
+    height: 90%;
+    bottom: 0;
+    right: 0;
+}
+
+#astro-img{
+    aspect-ratio: 1/1;
+    position: relative;
+    height: 100%;
+}
+
+#pc-img-div{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+}
+
+#pc-img{
+    aspect-ratio: 1/1;
+    position: relative;
+    height: 100%;
+    margin-right: 25%;
+    margin-left: 25%;
+    
+}
+
+#david-img-div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+}
+
+#david-img{
+    position: absolute;
+    aspect-ratio: 1/1;
+    height: 100%;
+    right: 0;
+}
