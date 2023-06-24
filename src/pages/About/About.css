@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Source+Code+Pro&display=swap');
+
+#about {
+    background-color: #090808;
+    width: 100%;
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', monospace;
+}
+
+#about-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about-tag-opening,
+#about-tag-closing {
+    font-size: 14px;
+    color: #ffffffd2;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#about-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#about-text {
+    margin-left: 5px;
+    width: 35%;
+    font-size: 3.5em;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlighted {
+    color: black;
+    width: fit-content;
+    padding: 1px;
+}
+
+#highlight-skin-brown {
+    background-color: #c19a6b;
+}
+
+#highlight-yellow {
+    background-color: #F0F757;
+}
+
+#skills-box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#skills-back-circle {
+    background-color: #282A2E;
+    width: 60%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+#skills-cards-box {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 10px;
+    width: 3em;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    transform: translate(-50%, -50%);
+
+}
+
+.card:nth-child(1) {
+    background-color: #F0F757;
+    z-index: 2;
+    transform: rotate(10deg);
+}
+
+.card:nth-child(2) {
+    background-color: #c19a6b;
+    z-index: 3;
+}
+
+.card:nth-child(3) {
+    background-color: #F0F757;
+    z-index: 4;
+}
+
+.card:nth-child(4) {
+    background-color: #c19a6b;
+    z-index: 5;
+}
+
+.card:nth-child(5) {
+    background-color: #F0F757;
+    z-index: 6;
+}
+
+.card:nth-child(6) {
+    background-color: #db54625b;
+    font-size: 2em;
+    color: white;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#skills-top-card-subtext{
+    font-size: 0.5em;
+    width: inherit;
+    text-align: center;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
