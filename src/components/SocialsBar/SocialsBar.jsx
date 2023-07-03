@@ -1,8 +1,5 @@
 import React from 'react'
 import './SocialsBar.css'
-import insta from '../../assets/Instagram.png'
-import github from '../../assets/Github.png'
-import linkedin from '../../assets/Linkedin.png'	
 
 const SocialsBar = () => {
   return (
