@@ -36,8 +36,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section style={{ "width": "100%", "height": "100vh", "background-color": "#0C1227" }}>
-      </section>
     </div>
   )
 }
